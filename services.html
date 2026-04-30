@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calibration Services - ARMTECH Pte Ltd</title>
+    <meta name="description" content="Professional calibration services for electrical, temperature, pressure, humidity and water quality instruments. Traceable calibration certificates in Singapore.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .service-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .service-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .service-list li {
+            padding: 8px 0;
+            color: #555;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .service-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .coverage-section {
+            background: #f8f9fa;
+        }
+        
+        .coverage-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1e3c72;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .features-section {
+            background: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .feature-item {
+            display: flex;
+            gap: 15px;
+            align-items: start;
+        }
+        
+        .feature-icon {
+            background: #1e3c72;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-content h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .feature-content p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #1e3c72;
+        }
+        
+        .btn-primary:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .accreditation-badge {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .accreditation-badge h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .accreditation-badge p {
+            color: #856404;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Professional Calibration Services</h1>
+            <p>Traceable Calibration for Test & Measurement Instruments</p>
+            <p style="font-size: 1rem; opacity: 0.9;">Serving industrial, pharmaceutical, HVAC, environmental and laboratory sectors across Singapore</p>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Calibration Services We Offer</h2>
+            <p class="section-subtitle">Comprehensive calibration solutions for all your test and measurement equipment</p>
+            
+            <div class="services-grid">
+                <!-- Electrical Calibration -->
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrical Calibration</h3>
+                    <p>Precision calibration for electrical test instruments ensuring accuracy in voltage, current, resistance and power measurements.</p>
+                    <ul class="service-list">
+                        <li>Digital Multimeters (DMM)</li>
+                        <li>Clamp Meters (AC/DC current)</li>
+                        <li>Power Analyzers</li>
+                        <li>Insulation Testers (Megohm meters)</li>
+                        <li>Earth Ground Testers</li>
+                        <li>Voltage/Current Calibrators</li>
+                        <li>Oscilloscopes & ScopeMeters</li>
+                    </ul>
+                </div>
+
+                <!-- Temperature Calibration -->
+                <div class="service-card">
+                    <div class="service-icon">🌡️</div>
+                    <h3>Temperature Calibration</h3>
+                    <p>Accurate temperature calibration from -25°C to 660°C for contact and non-contact thermometers.</p>
+                    <ul class="service-list">
+                        <li>Thermocouples (K, J, T, E, N types)</li>
+                        <li>RTD Thermometers</li>
+                        <li>Infrared Thermometers</li>
+                        <li>Thermal Imaging Cameras</li>
+                        <li>Data Loggers (Temperature)</li>
+                        <li>Digital Thermometers</li>
+                        <li>Surface Temperature Probes</li>
+                    </ul>
+                </div>
+
+                <!-- Pressure Calibration -->
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Pressure Calibration</h3>
+                    <p>High-precision pressure calibration for gauges, transmitters and differential pressure instruments.</p>
+                    <ul class="service-list">
+                        <li>Pressure Gauges (analog/digital)</li>
+                        <li>Pressure Transmitters</li>
+                        <li>Differential Pressure Meters</li>
+                        <li>Manometers</li>
+                        <li>Barometers</li>
+                        <li>Vacuum Gauges</li>
+                        <li>Process Pressure Calibrators</li>
+                    </ul>
+                </div>
+
+                <!-- Humidity Calibration -->
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Humidity & IAQ Calibration</h3>
+                    <p>Environmental calibration for HVAC commissioning, cleanrooms and indoor air quality monitoring.</p>
+                    <ul class="service-list">
+                        <li>Thermohygrometers</li>
+                        <li>Humidity Data Loggers</li>
+                        <li>Dew Point Meters</li>
+                        <li>IAQ Instruments (multi-parameter)</li>
+                        <li>Wet Bulb Thermometers</li>
+                        <li>Climate Meters</li>
+                    </ul>
+                </div>
+
+                <!-- Water Quality Calibration -->
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>Water Quality Calibration</h3>
+                    <p>Laboratory-grade calibration for water analysis instruments using certified reference standards.</p>
+                    <ul class="service-list">
+                        <li>pH Meters (portable & benchtop)</li>
+                        <li>Conductivity Meters (EC/TDS)</li>
+                        <li>Dissolved Oxygen Meters</li>
+                        <li>ORP Meters</li>
+                        <li>Turbidity Meters</li>
+                        <li>Chlorine Meters</li>
+                        <li>Multiparameter Water Quality Meters</li>
+                    </ul>
+                </div>
+
+                <!-- Process Calibration -->
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Process Calibration</h3>
+                    <p>Industrial process instrument calibration for 4-20mA loops, HART devices and control systems.</p>
+                    <ul class="service-list">
+                        <li>Loop Calibrators (mA signal)</li>
+                        <li>Process Calibrators (multifunction)</li>
+                        <li>HART Communicators</li>
+                        <li>Signal Generators</li>
+                        <li>4-20mA Transmitters</li>
+                        <li>Temperature Transmitters</li>
+                    </ul>
+                </div>
+
+                <!-- Air Quality & Velocity -->
+                <div class="service-card">
+                    <div class="service-icon">🌬️</div>
+                    <h3>Air Velocity & Flow</h3>
+                    <p>Calibration for HVAC balancing, ventilation testing and airflow measurement instruments.</p>
+                    <ul class="service-list">
+                        <li>Anemometers (vane, hot-wire, cup)</li>
+                        <li>Air Velocity Meters</li>
+                        <li>Pitot Tubes</li>
+                        <li>Flow Hoods</li>
+                        <li>Ventilation Meters</li>
+                    </ul>
+                </div>
+
+                <!-- Environmental Monitoring -->
+                <div class="service-card">
+                    <div class="service-icon">🌍</div>
+                    <h3>Environmental Calibration</h3>
+                    <p>Specialized calibration for environmental monitoring and safety instruments.</p>
+                    <ul class="service-list">
+                        <li>Sound Level Meters</li>
+                        <li>Noise Dosimeters</li>
+                        <li>Lux Meters (Light)</li>
+                        <li>CO₂ Meters</li>
+                        <li>Gas Detectors</li>
+                        <li>Particle Counters</li>
+                        <li>Vibration Meters</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Statistics -->
+    <section class="section coverage-section">
+        <div class="container">
+            <h2 class="section-title">Our Calibration Capabilities</h2>
+            <p class="section-subtitle">Comprehensive coverage across multiple measurement disciplines</p>
+            
+            <div class="coverage-stats">
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Instrument Models</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Calibration Disciplines</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Catalog Coverage</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Traceable</div>
+                    <div class="stat-label">Standards</div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Features/Benefits Section -->
+    <section class="section features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose ARMTECH Calibration Services?</h2>
+            <p class="section-subtitle">Professional calibration services backed by technical expertise and quality assurance</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📋</div>
+                    <div class="feature-content">
+                        <h4>Traceable Calibration</h4>
+                        <p>Calibrations traceable to national measurement standards with certificates including uncertainty statements</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-content">
+                        <h4>Fast Turnaround</h4>
+                        <p>Standard 3-5 working days calibration service with express options available</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🎓</div>
+                    <div class="feature-content">
+                        <h4>Certified Technicians</h4>
+                        <p>Calibrations performed by trained and certified metrology professionals</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📄</div>
+                    <div class="feature-content">
+                        <h4>Professional Certificates</h4>
+                        <p>Detailed calibration certificates with measurement data, uncertainties and traceability</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🔧</div>
+                    <div class="feature-content">
+                        <h4>On-Site Service Available</h4>
+                        <p>Field calibration services for critical equipment that cannot be removed from service</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📅</div>
+                    <div class="feature-content">
+                        <h4>Calibration Management</h4>
+                        <p>Annual contracts with automated due date reminders and calibration scheduling</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">✅</div>
+                    <div class="feature-content">
+                        <h4>Pass/Fail Criteria</h4>
+                        <p>Clear documentation of instrument performance against manufacturer specifications</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🏭</div>
+                    <div class="feature-content">
+                        <h4>Industry Compliance</h4>
+                        <p>Supporting FDA, GMP, ISO 9001, ISO 13485 and regulatory compliance requirements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Schedule Your Calibration?</h2>
+            <p>Get a quote for your calibration requirements or speak with our technical team</p>
+            <div class="cta-buttons">
+                <a href="#quote" class="btn btn-primary">Request a Quote</a>
+                <a href="tel:+6512345678" class="btn btn-secondary">Call +65 1234 5678</a>
+                <a href="mailto:calibration@armtech.com.sg" class="btn btn-secondary">Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Information Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Calibration Information</h2>
+            
+            <div style="max-width: 900px; margin: 40px auto;">
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #1e3c72; margin-bottom: 15px;">What's Included in Our Calibration Service?</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong>Pre-calibration assessment:</strong> Visual inspection and functionality check
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong>As-found data:</strong> Recording instrument condition before adjustment
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong>Calibration procedure:</strong> Following manufacturer specifications or recognized standards
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong>Adjustment (if required):</strong> Bringing instrument within specifications
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong>As-left data:</strong> Final measurement results after calibration
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong>Calibration certificate:</strong> Formal documentation with traceability and uncertainty
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Calibration sticker:</strong> Due date label affixed to instrument
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #fff3cd; padding: 25px; border-radius: 10px; border-left: 4px solid #ffc107;">
+                    <h4 style="color: #856404; margin-bottom: 10px;">📞 Need Help Choosing a Calibration Interval?</h4>
+                    <p style="color: #856404; margin: 0;">Our technical team can recommend appropriate calibration frequencies based on your usage, criticality, manufacturer recommendations and regulatory requirements. Contact us for consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

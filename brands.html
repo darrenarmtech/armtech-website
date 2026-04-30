@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands - Test & Measurement Equipment | ARMTECH Singapore</title>
+    <meta name="description" content="ARMTECH supplies Fluke, Lutron, Testo, Hanna Instruments and other leading T&M brands in Singapore. Professional calibration and technical support.">
+    <meta name="keywords" content="Fluke supplier Singapore, Lutron supplier Singapore, Testo Singapore, Hanna Instruments Singapore, test equipment brands">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+        
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .brand-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .brand-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+            border-color: #1e3c72;
+        }
+        
+        .brand-logo {
+            height: 80px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .brand-logo-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3c72;
+        }
+        
+        .brand-card h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .brand-card p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .product-count {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1e3c72;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        
+        .brand-specialties {
+            list-style: none;
+            margin-top: 15px;
+            text-align: left;
+        }
+        
+        .brand-specialties li {
+            padding: 5px 0;
+            color: #555;
+            font-size: 0.95rem;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .brand-specialties li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1e3c72;
+            font-weight: bold;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #1e3c72;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #2a5298;
+            transform: translateY(-2px);
+        }
+        
+        .why-authorized {
+            background: #f8f9fa;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h4 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .brands-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Leading Test & Measurement Brands</h1>
+            <p>ARMTECH supplies world-class test and measurement equipment in Singapore with professional calibration and technical support</p>
+        </div>
+    </section>
+
+    <!-- Brands Grid Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Brand Partners</h2>
+            <p class="section-subtitle">Industry-leading brands backed by local technical support and calibration services</p>
+            
+            <div class="brands-grid">
+                <!-- Fluke -->
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <div class="brand-logo-text">FLUKE</div>
+                    </div>
+                    <h3>Fluke Corporation</h3>
+                    <p>The world leader in professional electronic test tools and software. Trusted by technicians worldwide for precision and reliability.</p>
+                    <div class="product-count">43 Products Available</div>
+                    <ul class="brand-specialties">
+                        <li>Digital Multimeters & Clamp Meters</li>
+                        <li>Thermal Imaging Cameras</li>
+                        <li>Power Quality Analyzers</li>
+                        <li>Process Calibrators</li>
+                        <li>Insulation Testers</li>
+                    </ul>
+                    <a href="/products?brand=fluke" class="btn">View Fluke Products</a>
+                </div>
+
+                <!-- Lutron -->
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <div class="brand-logo-text">LUTRON</div>
+                    </div>
+                    <h3>Lutron Electronic</h3>
+                    <p>Taiwan-based manufacturer specializing in environmental monitoring and industrial measurement instruments with exceptional value.</p>
+                    <div class="product-count">99 Products Available</div>
+                    <ul class="brand-specialties">
+                        <li>Environmental Meters (CO₂, Humidity, Temperature)</li>
+                        <li>Water Quality Testers (pH, EC, DO)</li>
+                        <li>Sound & Light Meters</li>
+                        <li>Electrical Testers</li>
+                        <li>Force Gauges & Scales</li>
+                    </ul>
+                    <a href="/products?brand=lutron" class="btn">View Lutron Products</a>
+                </div>
+
+                <!-- Testo -->
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <div class="brand-logo-text">testo</div>
+                    </div>
+                    <h3>Testo SE & Co.</h3>
+                    <p>German precision engineering for HVAC, IAQ, combustion analysis and food safety applications. Innovation meets accuracy.</p>
+                    <div class="product-count">38 Products Available</div>
+                    <ul class="brand-specialties">
+                        <li>Smart Probes (Bluetooth Wireless)</li>
+                        <li>HVAC & IAQ Instruments</li>
+                        <li>Combustion Analyzers</li>
+                        <li>Thermal Imagers</li>
+                        <li>Data Loggers</li>
+                    </ul>
+                    <a href="/products?brand=testo" class="btn">View Testo Products</a>
+                </div>
+
+                <!-- Hanna Instruments -->
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <div class="brand-logo-text">HANNA</div>
+                    </div>
+                    <h3>Hanna Instruments</h3>
+                    <p>Global leader in analytical instrumentation for water quality, pH, EC, and laboratory testing. Precision you can trust.</p>
+                    <div class="product-count">32 Products Available</div>
+                    <ul class="brand-specialties">
+                        <li>pH Meters (Portable & Benchtop)</li>
+                        <li>EC/TDS Conductivity Meters</li>
+                        <li>Dissolved Oxygen Meters</li>
+                        <li>Multiparameter Water Quality</li>
+                        <li>Photometers & Turbidity Meters</li>
+                    </ul>
+                    <a href="/products?brand=hanna" class="btn">View Hanna Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Authorized Distributor Section -->
+    <section class="section why-authorized">
+        <div class="container">
+            <h2 class="section-title">Why Buy From ARMTECH?</h2>
+            <p class="section-subtitle">Quality products backed by professional service and local technical support</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h4>Quality Products</h4>
+                    <p>High-quality test and measurement instruments from trusted global manufacturers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Warranty Support</h4>
+                    <p>Assistance with warranty claims and product support throughout the product lifecycle.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h4>Technical Support</h4>
+                    <p>Expert technical assistance for product selection, application support and troubleshooting.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h4>Traceable Calibration</h4>
+                    <p>In-house calibration services with certificates traceable to national standards.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h4>Ready Stock & Fast Delivery</h4>
+                    <p>Local inventory for popular models. Same-day dispatch for in-stock items in Singapore.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h4>Corporate Accounts & Credit Terms</h4>
+                    <p>Flexible payment terms for qualified businesses. Volume pricing available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">Can't Find the Brand You Need?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.95;">ARMTECH sources test equipment from manufacturers worldwide. Contact us for special requests.</p>
+            <a href="/contact" class="btn" style="background: white; color: #1e3c72;">Contact Our Team</a>
+        </div>
+    </section>
+</body>
+</html>

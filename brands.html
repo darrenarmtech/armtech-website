@@ -4,354 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brands - Test & Measurement Equipment | ARMTECH Singapore</title>
-    <meta name="description" content="ARMTECH supplies Fluke, Lutron, Testo, Hanna Instruments and other leading T&M brands in Singapore. Professional calibration and technical support.">
-    <meta name="keywords" content="Fluke supplier Singapore, Lutron supplier Singapore, Testo Singapore, Hanna Instruments Singapore, test equipment brands">
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 80px 20px 60px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.95;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .section {
-            padding: 60px 20px;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #1e3c72;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 50px;
-            font-size: 1.1rem;
-        }
-        
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .brand-card {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        
-        .brand-card:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-            transform: translateY(-5px);
-            border-color: #1e3c72;
-        }
-        
-        .brand-logo {
-            height: 80px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .brand-logo-text {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e3c72;
-        }
-        
-        .brand-card h3 {
-            color: #1e3c72;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .brand-card p {
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-        
-        .product-count {
-            display: inline-block;
-            background: #e3f2fd;
-            color: #1e3c72;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin: 10px 0;
-        }
-        
-        .brand-specialties {
-            list-style: none;
-            margin-top: 15px;
-            text-align: left;
-        }
-        
-        .brand-specialties li {
-            padding: 5px 0;
-            color: #555;
-            font-size: 0.95rem;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .brand-specialties li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #1e3c72;
-            font-weight: bold;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #1e3c72;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-top: 15px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background: #2a5298;
-            transform: translateY(-2px);
-        }
-        
-        .why-authorized {
-            background: #f8f9fa;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .feature-card h4 {
-            color: #1e3c72;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-        
-        .feature-card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .brands-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        .hero { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 80px 20px 60px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.95; }
+        .section { padding: 60px 20px; }
+        .section-title { text-align: center; font-size: 2rem; color: #1e3c72; margin-bottom: 15px; font-weight: 600; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1.1rem; }
+        .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 40px; }
+        .brand-card { background: white; border: 2px solid #e0e0e0; border-radius: 12px; padding: 40px 30px; text-align: center; transition: all 0.3s ease; }
+        .brand-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.12); transform: translateY(-5px); border-color: #1e3c72; }
+        .brand-logo-text { font-size: 2.5rem; font-weight: 700; color: #1e3c72; margin-bottom: 25px; }
+        .brand-card h3 { color: #1e3c72; margin-bottom: 15px; font-size: 1.5rem; }
+        .brand-card p { color: #666; margin-bottom: 15px; line-height: 1.7; }
+        .product-count { display: inline-block; background: #e3f2fd; color: #1e3c72; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin: 10px 0; }
+        .brand-specialties { list-style: none; margin-top: 15px; text-align: left; }
+        .brand-specialties li { padding: 5px 0 5px 20px; color: #555; font-size: 0.95rem; position: relative; }
+        .brand-specialties li:before { content: "\u2022"; position: absolute; left: 0; color: #1e3c72; font-weight: bold; }
+        .btn { display: inline-block; padding: 12px 30px; background: #1e3c72; color: white; text-decoration: none; border-radius: 6px; margin-top: 15px; font-weight: 600; transition: all 0.3s; }
+        .btn:hover { background: #2a5298; transform: translateY(-2px); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .feature-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .feature-card h4 { color: #1e3c72; margin-bottom: 10px; }
+        .feature-card p { color: #666; font-size: 0.95rem; }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">ARMTECH</div>
+                <nav class="main-nav">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="services.html">Services</a>
+                    <a href="brands.html" class="active">Brands</a>
+                    <a href="industries.html">Industries</a>
+                    <a href="#contact" class="btn-contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="hero">
         <div class="container">
             <h1>Leading Test & Measurement Brands</h1>
-            <p>ARMTECH supplies world-class test and measurement equipment in Singapore with professional calibration and technical support</p>
+            <p>ARMTECH supplies world-class test and measurement equipment in Singapore</p>
         </div>
     </section>
-
-    <!-- Brands Grid Section -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Our Brand Partners</h2>
             <p class="section-subtitle">Industry-leading brands backed by local technical support and calibration services</p>
-            
             <div class="brands-grid">
-                <!-- Fluke -->
                 <div class="brand-card">
-                    <div class="brand-logo">
-                        <div class="brand-logo-text">FLUKE</div>
-                    </div>
+                    <div class="brand-logo-text">FLUKE</div>
                     <h3>Fluke Corporation</h3>
-                    <p>The world leader in professional electronic test tools and software. Trusted by technicians worldwide for precision and reliability.</p>
+                    <p>World leader in professional electronic test tools. Trusted by technicians worldwide.</p>
                     <div class="product-count">43 Products Available</div>
-                    <ul class="brand-specialties">
-                        <li>Digital Multimeters & Clamp Meters</li>
-                        <li>Thermal Imaging Cameras</li>
-                        <li>Power Quality Analyzers</li>
-                        <li>Process Calibrators</li>
-                        <li>Insulation Testers</li>
-                    </ul>
-                    <a href="/products?brand=fluke" class="btn">View Fluke Products</a>
+                    <ul class="brand-specialties"><li>Digital Multimeters & Clamp Meters</li><li>Thermal Imaging Cameras</li><li>Power Quality Analyzers</li><li>Process Calibrators</li><li>Insulation Testers</li></ul>
+                    <a href="products.html" class="btn">View Fluke Products</a>
                 </div>
-
-                <!-- Lutron -->
                 <div class="brand-card">
-                    <div class="brand-logo">
-                        <div class="brand-logo-text">LUTRON</div>
-                    </div>
+                    <div class="brand-logo-text">LUTRON</div>
                     <h3>Lutron Electronic</h3>
-                    <p>Taiwan-based manufacturer specializing in environmental monitoring and industrial measurement instruments with exceptional value.</p>
+                    <p>Taiwan-based manufacturer specializing in environmental monitoring instruments.</p>
                     <div class="product-count">99 Products Available</div>
-                    <ul class="brand-specialties">
-                        <li>Environmental Meters (CO₂, Humidity, Temperature)</li>
-                        <li>Water Quality Testers (pH, EC, DO)</li>
-                        <li>Sound & Light Meters</li>
-                        <li>Electrical Testers</li>
-                        <li>Force Gauges & Scales</li>
-                    </ul>
-                    <a href="/products?brand=lutron" class="btn">View Lutron Products</a>
+                    <ul class="brand-specialties"><li>Environmental Meters (CO2, Humidity)</li><li>Water Quality Testers</li><li>Sound & Light Meters</li><li>Electrical Testers</li><li>Force Gauges</li></ul>
+                    <a href="products.html" class="btn">View Lutron Products</a>
                 </div>
-
-                <!-- Testo -->
                 <div class="brand-card">
-                    <div class="brand-logo">
-                        <div class="brand-logo-text">testo</div>
-                    </div>
+                    <div class="brand-logo-text">testo</div>
                     <h3>Testo SE & Co.</h3>
-                    <p>German precision engineering for HVAC, IAQ, combustion analysis and food safety applications. Innovation meets accuracy.</p>
+                    <p>German precision engineering for HVAC, IAQ, combustion and food safety.</p>
                     <div class="product-count">38 Products Available</div>
-                    <ul class="brand-specialties">
-                        <li>Smart Probes (Bluetooth Wireless)</li>
-                        <li>HVAC & IAQ Instruments</li>
-                        <li>Combustion Analyzers</li>
-                        <li>Thermal Imagers</li>
-                        <li>Data Loggers</li>
-                    </ul>
-                    <a href="/products?brand=testo" class="btn">View Testo Products</a>
+                    <ul class="brand-specialties"><li>Smart Probes (Bluetooth Wireless)</li><li>HVAC & IAQ Instruments</li><li>Combustion Analyzers</li><li>Thermal Imagers</li><li>Data Loggers</li></ul>
+                    <a href="products.html" class="btn">View Testo Products</a>
                 </div>
-
-                <!-- Hanna Instruments -->
                 <div class="brand-card">
-                    <div class="brand-logo">
-                        <div class="brand-logo-text">HANNA</div>
-                    </div>
+                    <div class="brand-logo-text">HANNA</div>
                     <h3>Hanna Instruments</h3>
-                    <p>Global leader in analytical instrumentation for water quality, pH, EC, and laboratory testing. Precision you can trust.</p>
+                    <p>Global leader in analytical instrumentation for water quality and laboratory testing.</p>
                     <div class="product-count">32 Products Available</div>
-                    <ul class="brand-specialties">
-                        <li>pH Meters (Portable & Benchtop)</li>
-                        <li>EC/TDS Conductivity Meters</li>
-                        <li>Dissolved Oxygen Meters</li>
-                        <li>Multiparameter Water Quality</li>
-                        <li>Photometers & Turbidity Meters</li>
-                    </ul>
-                    <a href="/products?brand=hanna" class="btn">View Hanna Products</a>
+                    <ul class="brand-specialties"><li>pH Meters (Portable & Benchtop)</li><li>EC/TDS Conductivity Meters</li><li>Dissolved Oxygen Meters</li><li>Multiparameter Water Quality</li><li>Turbidity Meters</li></ul>
+                    <a href="products.html" class="btn">View Hanna Products</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Why Authorized Distributor Section -->
-    <section class="section why-authorized">
+    <section class="section" style="background:#f8f9fa;">
         <div class="container">
             <h2 class="section-title">Why Buy From ARMTECH?</h2>
-            <p class="section-subtitle">Quality products backed by professional service and local technical support</p>
-            
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">✓</div>
-                    <h4>Quality Products</h4>
-                    <p>High-quality test and measurement instruments from trusted global manufacturers.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h4>Warranty Support</h4>
-                    <p>Assistance with warranty claims and product support throughout the product lifecycle.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <h4>Technical Support</h4>
-                    <p>Expert technical assistance for product selection, application support and troubleshooting.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📋</div>
-                    <h4>Traceable Calibration</h4>
-                    <p>In-house calibration services with certificates traceable to national standards.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📦</div>
-                    <h4>Ready Stock & Fast Delivery</h4>
-                    <p>Local inventory for popular models. Same-day dispatch for in-stock items in Singapore.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">💼</div>
-                    <h4>Corporate Accounts & Credit Terms</h4>
-                    <p>Flexible payment terms for qualified businesses. Volume pricing available.</p>
-                </div>
+                <div class="feature-card"><div class="feature-icon">&#10003;</div><h4>Quality Products</h4><p>High-quality instruments from trusted global manufacturers.</p></div>
+                <div class="feature-card"><div class="feature-icon">&#128737;</div><h4>Warranty Support</h4><p>Assistance with warranty claims throughout the product lifecycle.</p></div>
+                <div class="feature-card"><div class="feature-icon">&#128295;</div><h4>Technical Support</h4><p>Expert assistance for product selection and troubleshooting.</p></div>
+                <div class="feature-card"><div class="feature-icon">&#128203;</div><h4>Traceable Calibration</h4><p>In-house calibration with certificates traceable to national standards.</p></div>
+                <div class="feature-card"><div class="feature-icon">&#128230;</div><h4>Ready Stock</h4><p>Local inventory for popular models. Fast delivery in Singapore.</p></div>
+                <div class="feature-card"><div class="feature-icon">&#128188;</div><h4>Corporate Accounts</h4><p>Flexible payment terms. Volume pricing available.</p></div>
             </div>
         </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; text-align: center;">
+    <footer class="site-footer" id="contact">
         <div class="container">
-            <h2 style="color: white; margin-bottom: 20px;">Can't Find the Brand You Need?</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.95;">ARMTECH sources test equipment from manufacturers worldwide. Contact us for special requests.</p>
-            <a href="/contact" class="btn" style="background: white; color: #1e3c72;">Contact Our Team</a>
+            <div class="footer-content">
+                <div class="footer-col"><h3>ARMTECH</h3><p>Professional Test & Measurement Equipment</p></div>
+                <div class="footer-col"><h4>Quick Links</h4><a href="products.html">Products</a><a href="services.html">Calibration Services</a><a href="brands.html">Brands</a></div>
+                <div class="footer-col"><h4>Contact</h4><p>Email: info@armtech.com.sg</p><p>WhatsApp: +65 9123 4567</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 ARMTECH. All rights reserved.</p></div>
         </div>
-    </section>
+    </footer>
+    <div class="whatsapp-widget">
+        <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+        <a href="https://wa.me/6591234567" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.825.737 5.48 2.027 7.784L0 32l8.394-2.02A15.924 15.924 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.44 0-4.745-.66-6.72-1.813l-.48-.287-4.987 1.2 1.227-4.893-.32-.507A13.253 13.253 0 012.667 16c0-7.36 5.973-13.333 13.333-13.333S29.333 8.64 29.333 16 23.36 29.333 16 29.333z"/><path d="M23.787 19.613c-.387-.193-2.293-1.133-2.647-1.267-.353-.133-.613-.2-.873.2-.26.4-1.007 1.267-1.233 1.527-.227.26-.453.293-.84.1-.387-.193-1.633-.6-3.107-1.92-1.147-1.027-1.92-2.293-2.147-2.68-.227-.387-.027-.6.173-.793.173-.173.387-.453.58-.68.193-.227.26-.387.387-.647.133-.26.067-.48-.033-.68-.1-.2-.873-2.107-1.2-2.88-.32-.753-.64-.653-.873-.667-.227-.013-.48-.013-.733-.013s-.667.093-1.013.467c-.347.373-1.32 1.293-1.32 3.147s1.353 3.653 1.54 3.907c.187.253 2.64 4.04 6.4 5.667.893.387 1.587.62 2.133.793.893.287 1.707.247 2.347.147.72-.107 2.293-.94 2.613-1.847.32-.907.32-1.68.227-1.847-.093-.173-.347-.267-.733-.46z"/></svg>
+        </a>
+    </div>
 </body>
-</html>
+                                                       </html>

@@ -3,508 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industries & Applications - Test & Measurement Solutions | ARMTECH Singapore</title>
-    <meta name="description" content="ARMTECH provides specialized test and measurement solutions for HVAC, pharmaceutical, electronics manufacturing, food & beverage, environmental monitoring and industrial sectors in Singapore.">
-    <meta name="keywords" content="HVAC instruments Singapore, pharmaceutical calibration, electronics test equipment, food safety testing, environmental monitoring Singapore">
+    <title>Industries & Applications | ARMTECH Singapore</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 80px 20px 60px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.95;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .section {
-            padding: 60px 20px;
-        }
-        
-        .industry-card {
-            background: white;
-            border-left: 4px solid #1e3c72;
-            margin-bottom: 40px;
-            padding: 40px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            border-radius: 8px;
-        }
-        
-        .industry-card:nth-child(even) {
-            border-left-color: #2a5298;
-        }
-        
-        .industry-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .industry-icon {
-            font-size: 3rem;
-            margin-right: 20px;
-        }
-        
-        .industry-card h2 {
-            color: #1e3c72;
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-        }
-        
-        .industry-subtitle {
-            color: #666;
-            font-size: 1rem;
-        }
-        
-        .industry-content {
-            margin-top: 20px;
-        }
-        
-        .industry-content p {
-            color: #555;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-        
-        .equipment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-        
-        .equipment-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 6px;
-        }
-        
-        .equipment-item h4 {
-            color: #1e3c72;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .equipment-item ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .equipment-item li {
-            padding: 5px 0;
-            color: #666;
-            font-size: 0.95rem;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .equipment-item li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #1e3c72;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .industry-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .industry-icon {
-                margin-bottom: 15px;
-            }
-        }
+        .hero { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 80px 20px 60px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.95; }
+        .section { padding: 60px 20px; }
+        .section-title { text-align: center; font-size: 2rem; color: #1e3c72; margin-bottom: 15px; font-weight: 600; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1.1rem; }
+        .industries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .industry-card { background: white; border: 1px solid #e0e0e0; border-radius: 12px; padding: 35px 30px; transition: all 0.3s ease; }
+        .industry-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.12); transform: translateY(-5px); border-color: #1e3c72; }
+        .industry-icon { font-size: 3rem; margin-bottom: 20px; }
+        .industry-card h3 { color: #1e3c72; margin-bottom: 15px; font-size: 1.4rem; }
+        .industry-card p { color: #666; margin-bottom: 15px; line-height: 1.7; }
+        .instrument-list { list-style: none; margin-top: 15px; }
+        .instrument-list li { padding: 6px 0 6px 20px; color: #555; font-size: 0.9rem; position: relative; border-bottom: 1px solid #f0f0f0; }
+        .instrument-list li:last-child { border-bottom: none; }
+        .instrument-list li:before { content: "\2192"; position: absolute; left: 0; color: #1e3c72; }
+        .cta-section { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; text-align: center; padding: 60px 20px; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 20px; }
+        .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; }
+        .btn-white { background: white; color: #1e3c72; }
+        .btn-outline { background: transparent; color: white; border: 2px solid white; }
     </style>
 </head>
 <body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">ARMTECH</div>
+                <nav class="main-nav">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="services.html">Services</a>
+                    <a href="brands.html">Brands</a>
+                    <a href="industries.html" class="active">Industries</a>
+                    <a href="#contact" class="btn-contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section class="hero">
         <div class="container">
-            <h1>Industry-Specific Test & Measurement Solutions</h1>
-            <p>Specialized instrumentation and calibration services tailored to your industry's unique requirements</p>
+            <h1>Industries & Applications</h1>
+            <p>Specialized test and measurement solutions for key sectors in Singapore</p>
         </div>
     </section>
-
     <section class="section">
         <div class="container">
-            <!-- HVAC & Building Services -->
-            <div class="industry-card">
-                <div class="industry-header">
-                    <div class="industry-icon">🏢</div>
-                    <div>
-                        <h2>HVAC & Building Services</h2>
-                        <p class="industry-subtitle">Air conditioning, ventilation, indoor air quality and building automation</p>
-                    </div>
+            <h2 class="section-title">Industries We Serve</h2>
+            <p class="section-subtitle">ARMTECH provides targeted T&M solutions across multiple critical sectors</p>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">&#10052;</div>
+                    <h3>HVAC & Building Services</h3>
+                    <p>Complete instrumentation for air conditioning, ventilation, and building environmental systems.</p>
+                    <ul class="instrument-list"><li>Air velocity & flow meters</li><li>Temperature & humidity meters</li><li>CO2 & IAQ monitors</li><li>Pressure differential meters</li><li>Clamp meters for electrical checks</li></ul>
                 </div>
-                <div class="industry-content">
-                    <p>Complete instrumentation solutions for HVAC contractors, MEP consultants and building management teams. From commissioning new systems to preventive maintenance and energy optimization.</p>
-                    
-                    <div class="equipment-grid">
-                        <div class="equipment-item">
-                            <h4>Air Velocity & Flow</h4>
-                            <ul>
-                                <li>Vane anemometers (Testo, Lutron)</li>
-                                <li>Hot-wire anemometers</li>
-                                <li>Air volume hoods</li>
-                                <li>Pitot tubes</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>IAQ Monitoring</h4>
-                            <ul>
-                                <li>CO₂ meters (Testo, Lutron)</li>
-                                <li>Humidity & temperature</li>
-                                <li>Multiparameter IAQ meters</li>
-                                <li>Particle counters</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Pressure & Leakage</h4>
-                            <ul>
-                                <li>Differential pressure meters</li>
-                                <li>Manometers (Fluke, Lutron)</li>
-                                <li>Duct leakage testers</li>
-                                <li>Filter monitoring</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Thermal Imaging</h4>
-                            <ul>
-                                <li>Fluke thermal cameras</li>
-                                <li>Testo thermal imagers</li>
-                                <li>Energy audit tools</li>
-                                <li>Infrared thermometers</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon">&#128138;</div>
+                    <h3>Pharmaceutical & Life Sciences</h3>
+                    <p>GMP-compliant instruments with calibration certificates for pharma and cleanrooms.</p>
+                    <ul class="instrument-list"><li>pH & conductivity meters</li><li>Temperature data loggers</li><li>Particle counters</li><li>Cleanroom pressure meters</li><li>Validation documentation</li></ul>
                 </div>
-            </div>
-
-            <!-- Pharmaceutical & Life Sciences -->
-            <div class="industry-card">
-                <div class="industry-header">
-                    <div class="industry-icon">💊</div>
-                    <div>
-                        <h2>Pharmaceutical & Life Sciences</h2>
-                        <p class="industry-subtitle">GMP compliance, cleanroom monitoring and laboratory quality control</p>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon">&#128268;</div>
+                    <h3>Electronics Manufacturing</h3>
+                    <p>Precision electrical measurement tools for PCB testing and quality control.</p>
+                    <ul class="instrument-list"><li>Digital multimeters</li><li>Oscilloscopes</li><li>LCR meters</li><li>Power analyzers</li><li>Insulation testers</li></ul>
                 </div>
-                <div class="industry-content">
-                    <p>ISO 17025 traceable calibration and validation services supporting FDA, GMP and ISO 13485 compliance. Instruments for cleanroom qualification, stability chamber validation and laboratory QC.</p>
-                    
-                    <div class="equipment-grid">
-                        <div class="equipment-item">
-                            <h4>Cleanroom Monitoring</h4>
-                            <ul>
-                                <li>Particle counters</li>
-                                <li>Airflow visualization</li>
-                                <li>Differential pressure monitors</li>
-                                <li>Temperature/humidity loggers</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Temperature Validation</h4>
-                            <ul>
-                                <li>Multi-channel data loggers (Testo)</li>
-                                <li>Precision thermometers</li>
-                                <li>Thermal mapping systems</li>
-                                <li>Stability chamber validation</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Water Quality</h4>
-                            <ul>
-                                <li>pH meters (Hanna benchtop)</li>
-                                <li>Conductivity meters</li>
-                                <li>TOC analyzers</li>
-                                <li>USP purified water testing</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Calibration Services</h4>
-                            <ul>
-                                <li>ISO 17025 traceable certs</li>
-                                <li>As-found/as-left data</li>
-                                <li>Annual calibration contracts</li>
-                                <li>Equipment qualification (IQ/OQ)</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon">&#127828;</div>
+                    <h3>Food & Beverage</h3>
+                    <p>Food safety instruments for temperature monitoring, water quality and HACCP compliance.</p>
+                    <ul class="instrument-list"><li>Food thermometers (core temp)</li><li>Cooking oil testers (TPM)</li><li>pH meters for food & bev</li><li>Humidity/temperature loggers</li><li>Cold chain monitoring</li></ul>
                 </div>
-            </div>
-
-            <!-- Electronics Manufacturing -->
-            <div class="industry-card">
-                <div class="industry-header">
-                    <div class="industry-icon">🔌</div>
-                    <div>
-                        <h2>Electronics Manufacturing</h2>
-                        <p class="industry-subtitle">PCB assembly, component testing and quality assurance</p>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon">&#127807;</div>
+                    <h3>Environmental Monitoring</h3>
+                    <p>Instruments for environmental compliance and pollution monitoring.</p>
+                    <ul class="instrument-list"><li>Sound level meters</li><li>Lux/UV light meters</li><li>Gas detectors (CO, CO2, O2)</li><li>Water quality multiparameter</li><li>Dust/particle counters</li></ul>
                 </div>
-                <div class="industry-content">
-                    <p>Electrical test equipment for production QC, incoming inspection and R&D. From basic multimeters to advanced power quality analyzers and thermal imaging for fault detection.</p>
-                    
-                    <div class="equipment-grid">
-                        <div class="equipment-item">
-                            <h4>Electrical Testing</h4>
-                            <ul>
-                                <li>Fluke 87V multimeters</li>
-                                <li>Insulation testers</li>
-                                <li>LCR meters (Lutron)</li>
-                                <li>Oscilloscopes</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Power Measurement</h4>
-                            <ul>
-                                <li>Power quality analyzers</li>
-                                <li>Clamp meters (Fluke, Lutron)</li>
-                                <li>Energy loggers</li>
-                                <li>Harmonics analyzers</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Thermal Analysis</h4>
-                            <ul>
-                                <li>Thermal cameras (Fluke, Testo)</li>
-                                <li>Infrared thermometers</li>
-                                <li>PCB fault detection</li>
-                                <li>Component overheating</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Environmental Control</h4>
-                            <ul>
-                                <li>ESD field meters (Lutron)</li>
-                                <li>Humidity monitors</li>
-                                <li>Temperature data loggers</li>
-                                <li>Cleanroom instruments</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon">&#127981;</div>
+                    <h3>Industrial & Manufacturing</h3>
+                    <p>Robust instruments for factory floor measurement and industrial maintenance.</p>
+                    <ul class="instrument-list"><li>Clamp meters & multimeters</li><li>Thermal cameras</li><li>Pressure calibrators</li><li>Loop calibrators (4-20mA)</li><li>Vibration & RPM meters</li></ul>
                 </div>
-            </div>
-
-            <!-- Food & Beverage -->
-            <div class="industry-card">
-                <div class="industry-header">
-                    <div class="industry-icon">🍽️</div>
-                    <div>
-                        <h2>Food & Beverage Industry</h2>
-                        <p class="industry-subtitle">HACCP compliance, food safety and quality control</p>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon">&#128167;</div>
+                    <h3>Water Treatment & Utilities</h3>
+                    <p>Water quality measurement for NEWater, desalination, and wastewater applications.</p>
+                    <ul class="instrument-list"><li>pH, EC, DO, ORP meters</li><li>Turbidity meters</li><li>Chlorine analyzers</li><li>Multiparameter water quality</li><li>Online monitoring systems</li></ul>
                 </div>
-                <div class="industry-content">
-                    <p>Temperature monitoring, pH testing and water quality instruments for food processing, cold chain logistics and restaurant operations. HACCP-compliant solutions with full traceability.</p>
-                    
-                    <div class="equipment-grid">
-                        <div class="equipment-item">
-                            <h4>Temperature Monitoring</h4>
-                            <ul>
-                                <li>Infrared thermometers (Testo, Fluke)</li>
-                                <li>Penetration probes</li>
-                                <li>Cold chain data loggers</li>
-                                <li>Thermal imaging cameras</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Water Quality</h4>
-                            <ul>
-                                <li>pH meters (Hanna)</li>
-                                <li>Chlorine testers</li>
-                                <li>TDS meters</li>
-                                <li>Turbidity meters</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Oil Quality Testing</h4>
-                            <ul>
-                                <li>Testo 270 cooking oil tester</li>
-                                <li>TPM measurement</li>
-                                <li>Reduce oil waste</li>
-                                <li>Food safety compliance</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Process Control</h4>
-                            <ul>
-                                <li>Humidity meters</li>
-                                <li>Pressure gauges</li>
-                                <li>Refractometers (Brix)</li>
-                                <li>Data logging systems</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Environmental Monitoring -->
-            <div class="industry-card">
-                <div class="industry-header">
-                    <div class="industry-icon">🌍</div>
-                    <div>
-                        <h2>Environmental Monitoring</h2>
-                        <p class="industry-subtitle">Water quality, air pollution, noise and emissions testing</p>
-                    </div>
-                </div>
-                <div class="industry-content">
-                    <p>Field instruments for environmental consultants, government agencies and research organizations. Portable meters for on-site testing with data logging and GPS capabilities.</p>
-                    
-                    <div class="equipment-grid">
-                        <div class="equipment-item">
-                            <h4>Water Quality</h4>
-                            <ul>
-                                <li>Multiparameter meters (Hanna)</li>
-                                <li>Dissolved oxygen (DO)</li>
-                                <li>pH, EC, turbidity</li>
-                                <li>Portable photometers</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Air Quality</h4>
-                            <ul>
-                                <li>Particulate matter (PM2.5, PM10)</li>
-                                <li>CO₂ monitors</li>
-                                <li>Gas detectors</li>
-                                <li>IAQ instruments (Testo, Lutron)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Noise Monitoring</h4>
-                            <ul>
-                                <li>Sound level meters (Lutron)</li>
-                                <li>Noise dosimeters</li>
-                                <li>Occupational noise monitoring</li>
-                                <li>Community noise surveys</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Emissions Testing</h4>
-                            <ul>
-                                <li>Combustion analyzers (Testo)</li>
-                                <li>Flue gas analysis</li>
-                                <li>Stack emissions</li>
-                                <li>Industrial compliance</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Industrial & Process -->
-            <div class="industry-card">
-                <div class="industry-header">
-                    <div class="industry-icon">⚙️</div>
-                    <div>
-                        <h2>Industrial & Process Control</h2>
-                        <p class="industry-subtitle">Predictive maintenance, process calibration and automation</p>
-                    </div>
-                </div>
-                <div class="industry-content">
-                    <p>Instrumentation for plant maintenance, process optimization and automation systems. From loop calibrators for 4-20mA signals to vibration analysis for predictive maintenance.</p>
-                    
-                    <div class="equipment-grid">
-                        <div class="equipment-item">
-                            <h4>Process Calibration</h4>
-                            <ul>
-                                <li>Fluke 754 documenting calibrator</li>
-                                <li>Loop calibrators (707, 709H)</li>
-                                <li>Pressure calibrators</li>
-                                <li>Temperature calibrators</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Vibration Analysis</h4>
-                            <ul>
-                                <li>Vibration meters (Lutron, Fluke)</li>
-                                <li>Bearing diagnostics</li>
-                                <li>Machinery monitoring</li>
-                                <li>Predictive maintenance</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Motor & Drive Testing</h4>
-                            <ul>
-                                <li>Power quality analyzers</li>
-                                <li>Motor analyzers (Fluke 438-II)</li>
-                                <li>Tachometers</li>
-                                <li>Thermal imaging</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="equipment-item">
-                            <h4>Electrical Safety</h4>
-                            <ul>
-                                <li>Earth ground testers (Fluke)</li>
-                                <li>Insulation resistance</li>
-                                <li>Leakage current meters</li>
-                                <li>Electrical installation testing</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="industry-card">
+                    <div class="industry-icon">&#127973;</div>
+                    <h3>Healthcare & Medical</h3>
+                    <p>Precision instruments for medical device manufacturing and healthcare facilities.</p>
+                    <ul class="instrument-list"><li>Autoclave temperature loggers</li><li>Cleanroom monitoring</li><li>Electrical safety testers</li><li>Environmental data loggers</li><li>Calibration services (ISO 13485)</li></ul>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; text-align: center;">
+    <section class="cta-section" id="contact">
         <div class="container">
-            <h2 style="color: white; margin-bottom: 20px;">Need Application-Specific Advice?</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.95;">Our technical team can recommend the right instruments for your specific application and industry requirements.</p>
-            <a href="/contact" style="display: inline-block; padding: 15px 35px; background: white; color: #1e3c72; text-decoration: none; border-radius: 8px; font-weight: 600;">Get Expert Consultation</a>
+            <h2>Need a Sector-Specific Solution?</h2>
+            <p>Our technical team will recommend the right instruments for your industry</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/6591234567" class="btn btn-white">WhatsApp Us</a>
+                <a href="products.html" class="btn btn-outline">Browse Products</a>
+            </div>
         </div>
     </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col"><h3>ARMTECH</h3><p>Professional Test & Measurement Equipment</p></div>
+                <div class="footer-col"><h4>Quick Links</h4><a href="products.html">Products</a><a href="services.html">Calibration Services</a><a href="brands.html">Brands</a></div>
+                <div class="footer-col"><h4>Contact</h4><p>Email: info@armtech.com.sg</p><p>WhatsApp: +65 9123 4567</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 ARMTECH. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <div class="whatsapp-widget">
+        <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+        <a href="https://wa.me/6591234567" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.825.737 5.48 2.027 7.784L0 32l8.394-2.02A15.924 15.924 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.44 0-4.745-.66-6.72-1.813l-.48-.287-4.987 1.2 1.227-4.893-.32-.507A13.253 13.253 0 012.667 16c0-7.36 5.973-13.333 13.333-13.333S29.333 8.64 29.333 16 23.36 29.333 16 29.333z"/><path d="M23.787 19.613c-.387-.193-2.293-1.133-2.647-1.267-.353-.133-.613-.2-.873.2-.26.4-1.007 1.267-1.233 1.527-.227.26-.453.293-.84.1-.387-.193-1.633-.6-3.107-1.92-1.147-1.027-1.92-2.293-2.147-2.68-.227-.387-.027-.6.173-.793.173-.173.387-.453.58-.68.193-.227.26-.387.387-.647.133-.26.067-.48-.033-.68-.1-.2-.873-2.107-1.2-2.88-.32-.753-.64-.653-.873-.667-.227-.013-.48-.013-.733-.013s-.667.093-1.013.467c-.347.373-1.32 1.293-1.32 3.147s1.353 3.653 1.54 3.907c.187.253 2.64 4.04 6.4 5.667.893.387 1.587.62 2.133.793.893.287 1.707.247 2.347.147.72-.107 2.293-.94 2.613-1.847.32-.907.32-1.68.227-1.847-.093-.173-.347-.267-.733-.46z"/></svg>
+        </a>
+    </div>
 </body>
 </html>

@@ -11,6 +11,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">ARMTECH</div>
+                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
                 <nav class="main-nav">
                     <a href="index.html">Home</a>
                     <a href="products.html" class="active">Products</a>
@@ -66,5 +67,9 @@
             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.825.737 5.48 2.027 7.784L0 32l8.394-2.02A15.924 15.924 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.44 0-4.745-.66-6.72-1.813l-.48-.287-4.987 1.2 1.227-4.893-.32-.507A13.253 13.253 0 012.667 16c0-7.36 5.973-13.333 13.333-13.333S29.333 8.64 29.333 16 23.36 29.333 16 29.333z"/><path d="M23.787 19.613c-.387-.193-2.293-1.133-2.647-1.267-.353-.133-.613-.2-.873.2-.26.4-1.007 1.267-1.233 1.527-.227.26-.453.293-.84.1-.387-.193-1.633-.6-3.107-1.92-1.147-1.027-1.92-2.293-2.147-2.68-.227-.387-.027-.6.173-.793.173-.173.387-.453.58-.68.193-.227.26-.387.387-.647.133-.26.067-.48-.033-.68-.1-.2-.873-2.107-1.2-2.88-.32-.753-.64-.653-.873-.667-.227-.013-.48-.013-.733-.013s-.667.093-1.013.467c-.347.373-1.32 1.293-1.32 3.147s1.353 3.653 1.54 3.907c.187.253 2.64 4.04 6.4 5.667.893.387 1.587.62 2.133.793.893.287 1.707.247 2.347.147.72-.107 2.293-.94 2.613-1.847.32-.907.32-1.68.227-1.847-.093-.173-.347-.267-.733-.46z"/></svg>
         </a>
     </div>
+
+<script>
+(function(){var t=document.querySelector('.nav-toggle');var n=document.querySelector('.main-nav');if(t&&n){t.addEventListener('click',function(){var open=n.classList.toggle('open');t.classList.toggle('active');t.setAttribute('aria-expanded',open?'true':'false')});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.classList.remove('active');t.setAttribute('aria-expanded','false')})})}})();
+</script>
 </body>
 </html>
